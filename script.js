@@ -429,11 +429,23 @@
       return;
     }
 
-    var texto = 'Hola Eric, consulta desde tu página ECHH:%0A%0A*Nombre:* ' +
-      encodeURIComponent(nombre) + '%0A*Teléfono:* ' + encodeURIComponent(telefono) +
-      '%0A*Mensaje:* ' + encodeURIComponent(mensaje) + '';
+    var textoWhats = 'Hola Eric, consulta desde tu página ECHH:\n\n' +
+      '*Nombre:* ' + nombre + '\n' +
+      '*Teléfono:* ' + telefono + '\n' +
+      '*Mensaje:* ' + mensaje;
 
-    window.open('https://wa.me/56994650760?text=' + texto, '_blank');
+    var cuerpoEmail = 'Hola Eric, consulta desde tu página ECHH:\n\n' +
+      'Nombre: ' + nombre + '\n' +
+      'Teléfono: ' + telefono + '\n' +
+      'Mensaje:\n' + mensaje;
+
+    // Abre WhatsApp en una pestaña nueva
+    window.open('https://wa.me/56994650760?text=' + encodeURIComponent(textoWhats), '_blank');
+
+    // Abre el cliente de correo con el mensaje preparado
+    window.location.href = 'mailto:contacto@echh.cl?subject=' +
+      encodeURIComponent('Consulta desde sitio web ECHH') +
+      '&body=' + encodeURIComponent(cuerpoEmail);
 
     form.reset();
     if (formStatus) {
