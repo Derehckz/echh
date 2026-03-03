@@ -2,5 +2,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/alanchoc/public_html/
-    - /bin/rsync -av --delete ./ $DEPLOYPATH
+    # Sincroniza solo el contenido del repo y ajusta permisos:
+    # Directorios: 755 (rwxr-xr-x), Archivos: 644 (rw-r--r--)
+    - /bin/rsync -av --delete \
+        --exclude=".git" \
+        --exclude=".cpanel.yml" \
+        --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
+        ./ $DEPLOYPATH
 
