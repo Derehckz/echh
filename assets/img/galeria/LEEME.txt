@@ -1,0 +1,12 @@
+GALERÍA — Trabajos realizados
+
+Coloca aquí tus fotos de proyectos con estos nombres:
+
+  trabajo-1.jpeg   (ej: instalación / tablero eléctrico)
+  trabajo-2.jpeg   (ej: bombas o riego)
+  trabajo-3.jpeg   (ej: piscina o proyecto industrial)
+  trabajo-4.jpeg   (ej: mantención domiciliaria)
+
+Usa archivos .jpeg. Tamaño recomendado: 900×560 px o similar (relación 16:10).
+
+Si no hay imágenes, el carrusel mostrará placeholders hasta que las agregues.

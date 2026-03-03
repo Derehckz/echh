@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECHH Servicios Eléctricos – Eric Chocano | Técnico Eléctrico SEC Clase B Chile</title>
+  <meta name="description" content="Eric Chocano - Técnico eléctrico SEC Clase B. Instalación y mantención eléctrica: bombas, tableros, riego automático, piscinas e inscripciones SEC. Cotiza por WhatsApp." />
+  <meta name="keywords" content="técnico eléctrico, instalación eléctrica, mantención eléctrica, SEC Chile, Región de Los Lagos, Región de Los Ríos, bombas de agua, tableros eléctricos, riego automático, piscinas" />
+  <meta name="author" content="Eric Chocano - ECHH Servicios Eléctricos" />
+  <link rel="canonical" href="https://echh.cl/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ECHH Servicios Eléctricos – Eric Chocano | Técnico Eléctrico SEC" />
+  <meta property="og:description" content="Instalación y mantención eléctrica en Chile. Bombas, tableros, riego, piscinas e inscripciones SEC. Técnico Clase B." />
+  <meta property="og:url" content="https://echh.cl/" />
+  <meta property="og:image" content="https://echh.cl/assets/img/logo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="ECHH Servicios Eléctricos" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ECHH Servicios Eléctricos – Eric Chocano | Técnico Eléctrico SEC" />
+  <meta name="twitter:description" content="Instalación y mantención eléctrica en Chile. Bombas, tableros, riego, piscinas e inscripciones SEC. Técnico Clase B." />
+  <meta name="twitter:image" content="https://echh.cl/assets/img/logo.jpg" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="assets/img/logo.jpg" type="image/jpg" />
+  <link rel="apple-touch-icon" href="assets/img/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0A1F44" />
+  <!-- Google Analytics 4 - Reemplaza G-XXXXXXXXXX por tu ID de medición -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <!-- Barra de progreso de lectura -->
+  <div class="reading-progress" role="presentation" aria-hidden="true">
+    <div class="reading-progress-bar" id="readingProgressBar"></div>
+  </div>
+  <a href="#main" class="skip-link">Ir al contenido</a>
+  <!-- JSON-LD LocalBusiness (actualiza url e image con tu dominio real cuando lo tengas) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ECHH Servicios Eléctricos",
+    "description": "Instalación y mantención eléctrica. Técnico eléctrico SEC Clase B - Eric Chocano.",
+    "url": "https://echh.cl",
+    "telephone": "+56994650760",
+    "email": "ericchocanoh@gmail.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "CL" },
+    "areaServed": [
+      { "@type": "State", "name": "Región de Los Lagos" },
+      { "@type": "State", "name": "Región de Los Ríos" }
+    ],
+    "image": "https://echh.cl/assets/img/logo.jpg",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "10",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      { "@type": "Review", "author": { "@type": "Person", "name": "Jorge Solis Abarca" }, "datePublished": "2024-10-12", "reviewBody": "Excelente trabajo con la instalación del tablero. Muy profesional y cumplió los plazos. Lo recomiendo.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Juan Pablo Silva Moya" }, "datePublished": "2024-09-28", "reviewBody": "Resolvió el tema de la bomba de agua en mi casa. Buen trato y precios justos. Volveré a llamarlo.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Eduardo Pérez Varela" }, "datePublished": "2024-11-05", "reviewBody": "Contraté a Eric para mantención eléctrica y quedé muy conforme. Serio y con conocimiento de la normativa.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "María Fernanda Rojas" }, "datePublished": "2024-08-20", "reviewBody": "Instaló el riego automático de mi jardín. Todo quedó impecable y el sistema funciona perfecto. Muy recomendable.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Carlos Muñoz Díaz" }, "datePublished": "2024-07-15", "reviewBody": "La bomba de la piscina dejó de funcionar y Eric la reparó al día. Excelente servicio y buena disposición.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Patricia Soto León" }, "datePublished": "2024-11-18", "reviewBody": "Me ayudó con la inscripción SEC de mi casa nueva. Todo en orden y sin problemas. Muy profesional.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Rodrigo Herrera" }, "datePublished": "2024-09-03", "reviewBody": "Ampliamos el tablero eléctrico y el trabajo quedó excelente. Cumplió los tiempos y explicó todo claramente.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Ana Lucía Torres" }, "datePublished": "2024-10-25", "reviewBody": "Bomba sumergible instalada en mi campo. Llegó cuando dijo y terminó en el día. Muy buen servicio.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Francisco Jara" }, "datePublished": "2024-08-08", "reviewBody": "Revisión eléctrica completa de la casa. Encontró varios puntos a mejorar y los solucionó. Totalmente confiable.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Carolina Vargas" }, "datePublished": "2024-11-01", "reviewBody": "Sistema de riego con programador automático. El jardín nunca se vio tan bien. Excelente técnico.", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD FAQPage para rich results en Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué zonas atiende?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atiendo proyectos en la Región de Los Lagos y la Región de Los Ríos, Chile. Si tu comuna está en estas regiones, puedo cotizar tu trabajo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Está habilitado por la SEC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Soy técnico eléctrico con Licencia SEC Clase B, vigente y al día. Las instalaciones que realizo cumplen la normativa eléctrica chilena y pueden ser inscritas ante la SEC cuando corresponda."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo solicito una cotización?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes escribirme por WhatsApp al +56 9 9465 0760, por correo a ericchocanoh@gmail.com o usar el formulario de esta página. Indica brevemente el tipo de trabajo (instalación, mantención, bomba, tablero, etc.) y te respondo a la brevedad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Realiza inscripciones SEC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Ofrezco tramitación de inscripciones eléctricas ante la SEC para instalaciones domiciliarias y proyectos que lo requieran, con asesoría en documentación y plazos."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ========================
+       NAVEGACIÓN
+  ======================== -->
+  <nav>
+    <a href="#inicio" class="nav-logo-link"><img src="assets/img/logo.jpg" alt="ECHH Servicios Eléctricos" class="nav-logo" /></a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio"       onclick="closeMenu()">Inicio</a>
+    <a href="#servicios"    onclick="closeMenu()">Servicios</a>
+    <a href="#galeria"      onclick="closeMenu()">Galería</a>
+    <a href="#sobre-mi"     onclick="closeMenu()">Sobre mí</a>
+    <a href="#testimonios"  onclick="closeMenu()">Testimonios</a>
+    <a href="#faq"           onclick="closeMenu()">FAQ</a>
+    <a href="#contacto"   onclick="closeMenu()">Contacto</a>
+  </div>
+
+  <!-- ========================
+       HERO (carrusel de fondo + texto)
+  ======================== -->
+  <main id="main">
+  <section class="hero" id="inicio">
+    <!-- Carrusel de fondo: 4 imágenes en assets/img/hero/ (hero-1.jpg … hero-4.jpg) -->
+    <div class="hero-bg" id="heroBg">
+      <div class="hero-bg-slide active">
+        <img src="assets/img/hero/hero-1.jpg" alt="ECHH Servicios Eléctricos - Técnico eléctrico en Los Lagos y Los Ríos" width="1920" height="1080" fetchpriority="high" onerror="this.src='https://placehold.co/1920x1080/0A1F44/FFC300?text=ECHH'" />
+      </div>
+      <div class="hero-bg-slide">
+        <img src="assets/img/hero/hero-2.jpg" alt="Instalación y mantención eléctrica - Bombas, tableros, riego y piscinas" width="1920" height="1080" loading="lazy" onerror="this.src='https://placehold.co/1920x1080/112B5E/FFC300?text=Servicios+El%C3%A9ctricos'" />
+      </div>
+      <div class="hero-bg-slide">
+        <img src="assets/img/hero/hero-3.jpg" alt="Servicios eléctricos profesionales - Normativa SEC Chile" width="1920" height="1080" loading="lazy" onerror="this.src='https://placehold.co/1920x1080/0A1F44/FFFFFF?text=Instalaci%C3%B3n+y+Mantenci%C3%B3n'" />
+      </div>
+      <div class="hero-bg-slide">
+        <img src="assets/img/hero/hero-4.jpg" alt="Cobertura Región de Los Lagos y Región de Los Ríos" width="1920" height="1080" loading="lazy" onerror="this.src='https://placehold.co/1920x1080/112B5E/FFC300?text=Los+Lagos+y+Los+R%C3%ADos'" />
+      </div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-accent"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⚡ Técnico Eléctrico Clase B – SEC</div>
+      <h1>ECHH <span>Servicios Eléctricos</span></h1>
+      <p class="hero-subtitle">Instalación y mantención</p>
+      <p class="hero-desc">Soluciones eléctricas seguras para hogares, industrias y proyectos en Los Lagos y Los Ríos.</p>
+      <a href="https://wa.me/56994650760?text=Hola%20Eric%2C%20vi%20tu%20p%C3%A1gina%20ECHH%20Servicios%20El%C3%A9ctricos%20y%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20para%20instalaci%C3%B3n%20o%20mantenci%C3%B3n%20el%C3%A9ctrica.%20Gracias."
+         class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.855L0 24l6.335-1.503A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.667-.514-5.188-1.41l-.371-.22-3.762.891.948-3.668-.243-.385A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Cotizar por WhatsApp
+      </a>
+    </div>
+    <div class="scroll-down"><span></span></div>
+  </section>
+
+  <!-- ========================
+       ZONA DE SERVICIO
+  ======================== -->
+  <section class="zona-servicio" id="zona">
+    <div class="zona-inner">
+      <span class="zona-icono" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </span>
+      <p class="zona-texto"><strong>Zona de servicio:</strong> Región de Los Lagos y Región de Los Ríos, Chile.</p>
+    </div>
+  </section>
+
+  <!-- ========================
+       MAPA ZONA DE COBERTURA
+  ======================== -->
+  <section class="seccion mapa-seccion" id="mapa-zona" aria-labelledby="titulo-mapa">
+    <div class="seccion-header fade-in">
+      <div class="seccion-etiqueta">Cobertura</div>
+      <h2 id="titulo-mapa">Zonas que <em>atiendo</em></h2>
+      <div class="seccion-divider"></div>
+      <p class="mapa-intro">Atiendo proyectos en las regiones de Los Lagos y Los Ríos. Si estás en esta zona, puedo cotizar tu trabajo.</p>
+    </div>
+    <div class="mapa-contenedor fade-in">
+      <div id="mapaCobertura" class="mapa-box" role="img" aria-label="Mapa: Región de Los Lagos y Región de Los Ríos, Chile"></div>
+      <p class="mapa-leyenda"><span class="mapa-leyenda-zona"></span> Zona de cobertura — Los Lagos y Los Ríos</p>
+      <a href="https://www.google.com/maps/search/Región+de+Los+Lagos+y+Región+de+Los+Ríos,+Chile" target="_blank" rel="noopener noreferrer" class="mapa-btn-gmaps">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Ver en Google Maps
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================
+       POR QUÉ ELEGIRME (información clave)
+  ======================== -->
+  <section class="info-clave seccion" aria-labelledby="titulo-info-clave">
+    <div class="info-clave-inner">
+      <h2 id="titulo-info-clave" class="sr-only">Información importante</h2>
+      <ul class="info-clave-lista">
+        <li class="info-clave-item fade-in">
+          <span class="info-clave-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          </span>
+          <div>
+            <strong>Técnico SEC Clase B</strong>
+            <p>Habilitado y al día con la normativa eléctrica chilena.</p>
+          </div>
+        </li>
+        <li class="info-clave-item fade-in">
+          <span class="info-clave-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <div>
+            <strong>Trabajo garantizado</strong>
+            <p>Compromiso con la calidad y la seguridad en cada instalación.</p>
+          </div>
+        </li>
+        <li class="info-clave-item fade-in">
+          <span class="info-clave-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <div>
+            <strong>Atención rápida</strong>
+            <p>Respuesta a consultas y cotizaciones en breve.</p>
+          </div>
+        </li>
+        <li class="info-clave-item fade-in">
+          <span class="info-clave-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <strong>Los Lagos y Los Ríos</strong>
+            <p>Cobertura en toda la zona sur de Chile.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================
+       SERVICIOS
+  ======================== -->
+  <section class="seccion" id="servicios">
+    <div class="seccion-header fade-in">
+      <div class="seccion-etiqueta">¿Qué ofrezco?</div>
+      <h2>Instalación y <em>Mantención</em></h2>
+      <div class="seccion-divider"></div>
+    </div>
+
+    <div class="servicios-grid">
+      <!-- Las imágenes están en assets/img/servicios/ (bombas.jpg, tableros.jpg, etc.). Si no existen, se muestra un placeholder. -->
+
+      <!-- Bombas -->
+      <div class="servicio-card fade-in" data-servicio>
+        <div class="card-imagen">
+          <img src="assets/img/servicios/bombas.jpg" alt="Instalación y mantención de bombas de agua - Sumergibles y de superficie" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Bombas+de+agua'" />
+          <span class="card-icono card-icono-overlay" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <h3>Bombas de Agua</h3>
+          <p>Instalación y mantención de bombas sumergibles, de superficie y sentina. Diagnóstico, reparación y puesta en marcha.</p>
+          <p class="servicio-desc-extendida">Incluyo instalación de bombas sumergibles y de superficie, reparación, diagnóstico de fallas y puesta en marcha. Trabajo con marcas reconocidas y cumplo normativas de seguridad.</p>
+          <button type="button" class="card-saber-mas" aria-label="Saber más sobre Bombas de agua">Saber más</button>
+        </div>
+      </div>
+
+      <!-- Tableros -->
+      <div class="servicio-card fade-in" data-servicio>
+        <div class="card-imagen">
+          <img src="assets/img/servicios/tableros.jpg" alt="Montaje y ampliación de tableros eléctricos domiciliarios e industriales" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Tableros+el%C3%A9ctricos'" />
+          <span class="card-icono card-icono-overlay" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <h3>Tableros Eléctricos</h3>
+          <p>Montaje, ampliación y mantención de tableros domiciliarios e industriales. Cumplimiento de normativa SEC.</p>
+          <p class="servicio-desc-extendida">Realizo montaje y ampliación de tableros según normativa SEC, desde viviendas hasta pequeños industriales. Incluye canalizaciones, protecciones y etiquetado.</p>
+          <button type="button" class="card-saber-mas" aria-label="Saber más sobre Tableros eléctricos">Saber más</button>
+        </div>
+      </div>
+
+      <!-- Riego -->
+      <div class="servicio-card fade-in" data-servicio>
+        <div class="card-imagen">
+          <img src="assets/img/servicios/riego.jpg" alt="Sistemas de riego automático con control eléctrico" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Riego+autom%C3%A1tico'" />
+          <span class="card-icono card-icono-overlay" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6 8 4 13 4 16a8 8 0 0016 0c0-3-2-8-8-14z"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <h3>Sistemas de Riego Automático</h3>
+          <p>Diseño, instalación y programación de sistemas de riego automático con control eléctrico eficiente.</p>
+          <p class="servicio-desc-extendida">Diseño e instalo sistemas de riego automático con programadores y electroválvulas. Ideal para jardines, huertos y áreas verdes con ahorro de agua y energía.</p>
+          <button type="button" class="card-saber-mas" aria-label="Saber más sobre Riego automático">Saber más</button>
+        </div>
+      </div>
+
+      <!-- Piscinas -->
+      <div class="servicio-card fade-in" data-servicio>
+        <div class="card-imagen">
+          <img src="assets/img/servicios/piscinas.jpg" alt="Equipos eléctricos de piscinas - Bombas, filtros e iluminación" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Piscinas'" />
+          <span class="card-icono card-icono-overlay" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2 12c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0"/><path d="M2 17c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0"/><path d="M7 7h10"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <h3>Equipos Eléctricos de Piscinas</h3>
+          <p>Instalación y mantención de bombas, filtros, iluminación y sistemas de automatización para piscinas.</p>
+          <p class="servicio-desc-extendida">Instalación y mantención de bombas de piscina, filtros, iluminación subacuática y sistemas de control. Todo con certificación y seguridad para uso en piscinas.</p>
+          <button type="button" class="card-saber-mas" aria-label="Saber más sobre Piscinas">Saber más</button>
+        </div>
+      </div>
+
+      <!-- SEC -->
+      <div class="servicio-card fade-in" data-servicio>
+        <div class="card-imagen">
+          <img src="assets/img/servicios/sec.jpg" alt="Tramitación de inscripciones eléctricas ante la SEC" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Inscripciones+SEC'" />
+          <span class="card-icono card-icono-overlay" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <h3>Inscripciones Eléctricas SEC</h3>
+          <p>Tramitación completa de inscripciones ante la SEC para instalaciones domiciliarias y proyectos eléctricos.</p>
+          <p class="servicio-desc-extendida">Gestión completa de inscripciones y regularizaciones ante la SEC para instalaciones domiciliarias e industriales, con asesoría en documentación y plazos.</p>
+          <button type="button" class="card-saber-mas" aria-label="Saber más sobre Inscripciones SEC">Saber más</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal Servicio (Saber más) -->
+  <div class="modal-overlay" id="modalServicio" role="dialog" aria-modal="true" aria-labelledby="modalServicioTitulo" aria-hidden="true" hidden>
+    <div class="modal-box modal-servicio">
+      <button type="button" class="modal-cerrar" id="modalServicioCerrar" aria-label="Cerrar">×</button>
+      <div class="modal-servicio-imagen"><img id="modalServicioImg" src="" alt="" /></div>
+      <div class="modal-servicio-texto">
+        <h3 id="modalServicioTitulo" class="modal-titulo"></h3>
+        <p id="modalServicioDesc" class="modal-desc"></p>
+        <a href="https://wa.me/56994650760" id="modalWhatsAppLink" class="btn-whatsapp btn-whatsapp-modal" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================
+       GALERÍA / TRABAJOS REALIZADOS
+  ======================== -->
+  <section class="seccion galeria-seccion" id="galeria">
+    <div class="seccion-header fade-in">
+      <div class="seccion-etiqueta">Portafolio</div>
+      <h2>Trabajos <em>realizados</em></h2>
+      <div class="seccion-divider"></div>
+      <p class="galeria-intro">Algunos de los proyectos de instalación y mantención eléctrica que he realizado.</p>
+    </div>
+
+    <div class="carousel fade-in">
+      <div class="carousel-inner">
+        <button type="button" class="carousel-btn carousel-prev" aria-label="Anterior" id="carouselPrev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente" id="carouselNext">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Clic en una imagen abre el lightbox. Fotos en assets/img/galeria/ -->
+          <div class="carousel-slide" data-galeria-index="0" tabindex="0" role="button">
+            <img src="assets/img/galeria/trabajo-1.jpeg" alt="Instalación eléctrica y tablero - Proyecto realizado por ECHH" width="1200" height="750" loading="lazy" onerror="this.src='https://placehold.co/900x563/112B5E/FFC300?text=Instalaci%C3%B3n+el%C3%A9ctrica'" />
+            <div class="carousel-caption">Instalación y tablero eléctrico — <span class="carousel-ver-grande">Ver en grande</span></div>
+          </div>
+          <div class="carousel-slide" data-galeria-index="1" tabindex="0" role="button">
+            <img src="assets/img/galeria/trabajo-2.jpeg" alt="Bomba de agua y sistema de riego instalado - Los Lagos" width="1200" height="750" loading="lazy" onerror="this.src='https://placehold.co/900x563/112B5E/FFC300?text=Bombas+y+riego'" />
+            <div class="carousel-caption">Bombas y sistemas de riego — <span class="carousel-ver-grande">Ver en grande</span></div>
+          </div>
+          <div class="carousel-slide" data-galeria-index="2" tabindex="0" role="button">
+            <img src="assets/img/galeria/trabajo-3.jpeg" alt="Proyecto eléctrico especial - Piscina o industrial" width="1200" height="750" loading="lazy" onerror="this.src='https://placehold.co/900x563/112B5E/FFC300?text=Proyectos+especiales'" />
+            <div class="carousel-caption">Proyectos especiales — <span class="carousel-ver-grande">Ver en grande</span></div>
+          </div>
+          <div class="carousel-slide" data-galeria-index="3" tabindex="0" role="button">
+            <img src="assets/img/galeria/trabajo-4.jpeg" alt="Mantención eléctrica domiciliaria - Región de Los Ríos" width="1200" height="750" loading="lazy" onerror="this.src='https://placehold.co/900x563/112B5E/FFC300?text=Mantenci%C3%B3n+domiciliaria'" />
+            <div class="carousel-caption">Mantención domiciliaria — <span class="carousel-ver-grande">Ver en grande</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="carousel-dots" id="carouselDots" role="tablist"></div>
+        <p class="carousel-counter" id="carouselCounter" aria-live="polite">1 de 4</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Galería (clic en imagen) -->
+  <div class="lightbox" id="lightboxGaleria" role="dialog" aria-modal="true" aria-label="Ver imagen en grande" aria-hidden="true" hidden>
+    <button type="button" class="lightbox-cerrar" id="lightboxCerrar" aria-label="Cerrar">×</button>
+    <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+    <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Siguiente">›</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ========================
+       SOBRE MÍ
+  ======================== -->
+  <section class="sobre-mi" id="sobre-mi">
+    <div class="sobre-grid">
+      <div class="sobre-texto fade-in">
+        <div class="seccion-etiqueta">Quién soy</div>
+        <h2>Eric Chocano<span><br>Técnico Eléctrico</span></h2>
+        <p>
+          Soy Eric Chocano, técnico eléctrico habilitado por la SEC con Licencia Clase B, especializado en soluciones eléctricas residenciales e industriales en Chile.
+        </p>
+        <p>
+          Con años de experiencia en el rubro, me comprometo a entregar un trabajo de calidad, dentro de los plazos acordados y siempre bajo las normativas técnicas vigentes. Tu seguridad y satisfacción son mi prioridad.
+        </p>
+        <p>
+          Cada proyecto es abordado con profesionalismo, honestidad y atención al detalle — desde una pequeña instalación domiciliaria hasta proyectos de mayor envergadura.
+        </p>
+      </div>
+      <div class="stats-grid fade-in">
+        <div class="stat-item">
+          <div class="stat-numero">+10</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-numero">100%</div>
+          <div class="stat-label">Trabajos garantizados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-numero">SEC</div>
+          <div class="stat-label">Licencia Clase B</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-numero">24h</div>
+          <div class="stat-label">Atención rápida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       TESTIMONIOS
+  ======================== -->
+  <section class="seccion testimonios-seccion" id="testimonios">
+    <div class="seccion-header fade-in">
+      <div class="seccion-etiqueta">Confianza</div>
+      <h2>Lo que dicen <em>mis clientes</em></h2>
+      <div class="seccion-divider"></div>
+      <p class="testimonios-intro">Más de 10 años de clientes satisfechos en Los Lagos y Los Ríos.</p>
+    </div>
+    <div class="testimonios-wrapper">
+      <button type="button" class="testimonios-carousel-btn testimonios-prev" id="testimoniosPrev" aria-label="Anterior testimonio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="testimonios-carousel">
+        <div class="testimonios-track" id="testimoniosTrack">
+          <blockquote class="testimonio-card fade-in" data-servicio="Tableros">
+            <span class="testimonio-servicio">Tableros</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Excelente trabajo con la instalación del tablero. Muy profesional y cumplió los plazos. Lo recomiendo."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">JS</span>
+              Jorge Solis Abarca, Región de Los Lagos
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Bombas">
+            <span class="testimonio-servicio">Bombas</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Resolvió el tema de la bomba de agua en mi casa. Buen trato y precios justos. Volveré a llamarlo."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">JP</span>
+              Juan Pablo Silva Moya, Los Ríos
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Mantención">
+            <span class="testimonio-servicio">Mantención</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Contraté a Eric para mantención eléctrica y quedé muy conforme. Serio y con conocimiento de la normativa."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">EP</span>
+              Eduardo Pérez Varela, Zona sur
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Riego">
+            <span class="testimonio-servicio">Riego</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Instaló el riego automático de mi jardín. Todo quedó impecable y el sistema funciona perfecto. Muy recomendable."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">MF</span>
+              María Fernanda Rojas, Puerto Montt
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Piscinas">
+            <span class="testimonio-servicio">Piscinas</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"La bomba de la piscina dejó de funcionar y Eric la reparó al día. Excelente servicio y buena disposición."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">CM</span>
+              Carlos Muñoz Díaz, Puerto Varas
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="SEC">
+            <span class="testimonio-servicio">Inscripción SEC</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Me ayudó con la inscripción SEC de mi casa nueva. Todo en orden y sin problemas. Muy profesional."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">PS</span>
+              Patricia Soto León, Valdivia
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Tableros">
+            <span class="testimonio-servicio">Tableros</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Ampliamos el tablero eléctrico y el trabajo quedó excelente. Cumplió los tiempos y explicó todo claramente."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">RH</span>
+              Rodrigo Herrera, Osorno
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Bombas">
+            <span class="testimonio-servicio">Bombas</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Bomba sumergible instalada en mi campo. Llegó cuando dijo y terminó en el día. Muy buen servicio."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">AL</span>
+              Ana Lucía Torres, Castro
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Mantención">
+            <span class="testimonio-servicio">Mantención</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Revisión eléctrica completa de la casa. Encontró varios puntos a mejorar y los solucionó. Totalmente confiable."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">FJ</span>
+              Francisco Jara, Frutillar
+            </footer>
+          </blockquote>
+          <blockquote class="testimonio-card fade-in" data-servicio="Riego">
+            <span class="testimonio-servicio">Riego</span>
+            <div class="testimonio-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonio-texto">"Sistema de riego con programador automático. El jardín nunca se vio tan bien. Excelente técnico."</p>
+            <footer class="testimonio-autor">
+              <span class="testimonio-inicial" aria-hidden="true">CV</span>
+              Carolina Vargas, La Unión
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+      <button type="button" class="testimonios-carousel-btn testimonios-next" id="testimoniosNext" aria-label="Siguiente testimonio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="testimonios-controls">
+      <div class="testimonios-dots" id="testimoniosDots" role="tablist"></div>
+      <p class="testimonios-counter" id="testimoniosCounter" aria-live="polite">1 de 10</p>
+    </div>
+    <div class="testimonios-cta fade-in">
+      <p>¿Quieres ser el próximo cliente satisfecho?</p>
+      <a href="https://wa.me/56994650760?text=Hola%20Eric%2C%20quiero%20cotizar%20un%20servicio%20el%C3%A9ctrico." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.855L0 24l6.335-1.503A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.667-.514-5.188-1.41l-.371-.22-3.762.891.948-3.668-.243-.385A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================
+       PREGUNTAS FRECUENTES (uso informativo)
+  ======================== -->
+  <section class="seccion faq-seccion" id="faq" aria-labelledby="titulo-faq">
+    <div class="seccion-header fade-in">
+      <div class="seccion-etiqueta">Información</div>
+      <h2 id="titulo-faq">Preguntas <em>frecuentes</em></h2>
+      <div class="seccion-divider"></div>
+    </div>
+    <div class="faq-lista">
+      <details class="faq-item fade-in">
+        <summary>¿Qué zonas atiende?</summary>
+        <p>Atiendo proyectos en la Región de Los Lagos y la Región de Los Ríos, Chile. Si tu comuna está en estas regiones, puedo cotizar tu trabajo.</p>
+      </details>
+      <details class="faq-item fade-in">
+        <summary>¿Está habilitado por la SEC?</summary>
+        <p>Sí. Soy técnico eléctrico con Licencia SEC Clase B, vigente y al día. Las instalaciones que realizo cumplen la normativa eléctrica chilena y pueden ser inscritas ante la SEC cuando corresponda.</p>
+      </details>
+      <details class="faq-item fade-in">
+        <summary>¿Cómo solicito una cotización?</summary>
+        <p>Puedes escribirme por WhatsApp al +56 9 9465 0760, por correo a ericchocanoh@gmail.com o usar el formulario de esta página. Indica brevemente el tipo de trabajo (instalación, mantención, bomba, tablero, etc.) y te respondo a la brevedad.</p>
+      </details>
+      <details class="faq-item fade-in">
+        <summary>¿Realiza inscripciones SEC?</summary>
+        <p>Sí. Ofrezco tramitación de inscripciones eléctricas ante la SEC para instalaciones domiciliarias y proyectos que lo requieran, con asesoría en documentación y plazos.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ========================
+       CONTACTO
+  ======================== -->
+  <section class="seccion contacto-bg" id="contacto">
+    <div class="seccion-header fade-in">
+      <div class="seccion-etiqueta">Hablemos</div>
+      <h2>Solicita tu <em>Cotización</em></h2>
+      <div class="seccion-divider"></div>
+    </div>
+
+    <div class="contacto-grid">
+
+      <!-- Información -->
+      <div class="info-contacto fade-in">
+        <h3>Información de contacto</h3>
+
+        <div class="contacto-item">
+          <div class="contacto-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014 11.74a19.79 19.79 0 01-3.07-8.67A2 2 0 012.91 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contacto-data">
+            <span>Teléfono / WhatsApp</span>
+            <a href="tel:+56994650760">+56 9 9465 0760</a>
+          </div>
+        </div>
+
+        <div class="contacto-item">
+          <div class="contacto-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contacto-data">
+            <span>Correo Electrónico</span>
+            <a href="mailto:ericchocanoh@gmail.com">ericchocanoh@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contacto-item">
+          <div class="contacto-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div class="contacto-data">
+            <span>Instagram</span>
+            <a href="https://www.instagram.com/echh.servicioselectricos" target="_blank" rel="noopener noreferrer">@echh.servicioselectricos</a>
+          </div>
+        </div>
+
+        <div class="contacto-item">
+          <div class="contacto-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </div>
+          <div class="contacto-data">
+            <span>Facebook</span>
+            <a href="https://www.facebook.com/echh.se" target="_blank" rel="noopener noreferrer">Eric Chocano - Servicios Eléctricos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="formulario fade-in">
+        <h3>Envía tu consulta</h3>
+        <p class="formulario-cta">¿Necesitas un técnico en Los Lagos o Los Ríos? Escríbeme sin compromiso.</p>
+        <p class="form-hint">Al enviar se abrirá WhatsApp con tu mensaje listo para enviar a ECHH.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-grupo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" placeholder="+56 9 XXXX XXXX" required />
+          </div>
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Describe el servicio que necesitas..." required></textarea>
+          </div>
+          <div id="formStatus" class="form-status" role="status"></div>
+          <button type="submit" class="btn-enviar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.855L0 24l6.335-1.503A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.667-.514-5.188-1.41l-.371-.22-3.762.891.948-3.668-.243-.385A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            Enviar por WhatsApp
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ========================
+       FOOTER
+  ======================== -->
+  <footer>
+    <p>© <span id="anioActual"></span> <span>ECHH Servicios Eléctricos</span> — Eric Chocano. Técnico Eléctrico Clase B SEC. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ========================
+       BOTÓN SUBIR
+  ======================== -->
+  <a href="#inicio" class="btn-subir" id="btnSubir" aria-label="Volver arriba" title="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </a>
+
+  <!-- ========================
+       BOTÓN FLOTANTE WHATSAPP
+  ======================== -->
+  <a href="https://wa.me/56994650760?text=Hola%20Eric%2C%20vi%20tu%20p%C3%A1gina%20ECHH%20Servicios%20El%C3%A9ctricos%20y%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n.%20Gracias."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chatear por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.855L0 24l6.335-1.503A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.667-.514-5.188-1.41l-.371-.22-3.762.891.948-3.668-.243-.385A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

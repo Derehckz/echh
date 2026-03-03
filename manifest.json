@@ -1,0 +1,25 @@
+{
+  "name": "ECHH Servicios Eléctricos",
+  "short_name": "ECHH",
+  "description": "Técnico eléctrico SEC Clase B - Instalación y mantención eléctrica en Los Lagos y Los Ríos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1F44",
+  "theme_color": "#0A1F44",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/img/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "lang": "es-CL"
+}

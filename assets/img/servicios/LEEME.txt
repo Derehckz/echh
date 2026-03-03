@@ -1,0 +1,11 @@
+IMÁGENES DE SERVICIOS — Sección "¿Qué ofrezco?"
+
+Coloca aquí una foto por servicio (recomendado 400×240 px o relación 5:3):
+
+  bombas.jpg    → Bombas de agua
+  tableros.jpg  → Tableros eléctricos
+  riego.jpg     → Sistemas de riego automático
+  piscinas.jpg  → Equipos eléctricos de piscinas
+  sec.jpg       → Inscripciones SEC
+
+Puedes usar .jpg o .png. Si no agregas una imagen, se mostrará un placeholder con el nombre del servicio.
