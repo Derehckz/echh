@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/alanchoc/public_html/
+    - /bin/rsync -av --delete ./ $DEPLOYPATH
+
