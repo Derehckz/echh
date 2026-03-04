@@ -455,80 +455,147 @@
     }
   });
 
-  /* --- Mapa zona de cobertura (Leaflet) + marcadores ciudades --- */
-  (function () {
-    var mapEl = document.getElementById('mapaCobertura');
-    if (!mapEl || typeof L === 'undefined') return;
-
-    /* Ciudades y sectores que atiendo (orden aleatorio al cargar) */
-    var ubicaciones = [
-      { lat: -39.8142, lng: -73.2459, nombre: 'Valdivia' },
-      { lat: -40.5734, lng: -73.1310, nombre: 'Osorno' },
-      { lat: -41.4717, lng: -72.9369, nombre: 'Puerto Montt' },
-      { lat: -41.3195, lng: -72.9854, nombre: 'Puerto Varas' },
-      { lat: -42.4722, lng: -73.7731, nombre: 'Castro (Chiloé)' },
-      { lat: -41.8697, lng: -73.8203, nombre: 'Ancud' },
-      { lat: -40.2931, lng: -73.0820, nombre: 'La Unión' },
-      { lat: -40.3356, lng: -72.9556, nombre: 'Río Bueno' },
-      { lat: -39.6431, lng: -72.3339, nombre: 'Panguipulli' },
-      { lat: -41.1267, lng: -73.0489, nombre: 'Frutillar' },
-      { lat: -41.2611, lng: -72.9967, nombre: 'Llanquihue' },
-      { lat: -40.9667, lng: -72.8833, nombre: 'Puerto Octay' },
-      { lat: -40.9167, lng: -73.1667, nombre: 'Purranque' },
-      { lat: -40.0667, lng: -72.8833, nombre: 'Paillaco' },
-      { lat: -40.1333, lng: -72.4167, nombre: 'Futrono' },
-      { lat: -41.7739, lng: -73.1322, nombre: 'Calbuco' }
-    ];
-
-    /* Bounds: desde el primer punto hasta el último (todos los marcadores) */
-    var bounds = L.latLngBounds(ubicaciones.map(function (u) { return [u.lat, u.lng]; }));
-
-    var map = L.map('mapaCobertura', {
-      scrollWheelZoom: false,
-      dragging: false,
-      doubleClickZoom: false,
-      zoomControl: false,
-      touchZoom: false,
-      boxZoom: false,
-      keyboard: false
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 9 });
-
-    function shuffleArray(arr) {
-      var a = arr.slice();
-      for (var i = a.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var t = a[i];
-        a[i] = a[j];
-        a[j] = t;
-      }
-      return a;
+  /* --- Carga diferida de Leaflet y mapa de cobertura --- */
+  function cargarLeaflet(callback) {
+    if (window.L && typeof callback === 'function') {
+      callback();
+      return;
     }
 
-    var pinIcon = L.divIcon({
-      className: 'mapa-pin',
-      html: '<span class="mapa-pin-icon"></span>',
-      iconSize: [28, 28],
-      iconAnchor: [14, 28]
-    });
+    var cssId = 'leaflet-css';
+    if (!document.getElementById(cssId)) {
+      var link = document.createElement('link');
+      link.id = cssId;
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+      link.crossOrigin = '';
+      document.head.appendChild(link);
+    }
 
-    var ordenAleatorio = shuffleArray(ubicaciones);
-    ordenAleatorio.forEach(function (loc, i) {
-      setTimeout(function () {
-        L.marker([loc.lat, loc.lng], { icon: pinIcon })
-          .addTo(map)
-          .bindTooltip(loc.nombre, {
-            permanent: false,
-            direction: 'top',
-            offset: [0, -12],
-            opacity: 0.95
-          });
-      }, 120 * i);
-    });
+    var scriptId = 'leaflet-js';
+    var existingScript = document.getElementById(scriptId);
+    if (existingScript) {
+      if (typeof callback === 'function') {
+        existingScript.addEventListener('load', function () {
+          callback();
+        }, { once: true });
+      }
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.id = scriptId;
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    script.crossOrigin = '';
+    script.defer = true;
+    if (typeof callback === 'function') {
+      script.addEventListener('load', function () {
+        callback();
+      }, { once: true });
+    }
+    document.body.appendChild(script);
+  }
+
+  /* --- Mapa zona de cobertura (Leaflet) + marcadores ciudades, sólo cuando se ve en pantalla --- */
+  (function () {
+    var mapEl = document.getElementById('mapaCobertura');
+    if (!mapEl) return;
+
+    var mapaInicializado = false;
+
+    function initMapa() {
+      if (mapaInicializado || typeof L === 'undefined') return;
+      mapaInicializado = true;
+
+      var ubicaciones = [
+        { lat: -39.8142, lng: -73.2459, nombre: 'Valdivia' },
+        { lat: -40.5734, lng: -73.1310, nombre: 'Osorno' },
+        { lat: -41.4717, lng: -72.9369, nombre: 'Puerto Montt' },
+        { lat: -41.3195, lng: -72.9854, nombre: 'Puerto Varas' },
+        { lat: -42.4722, lng: -73.7731, nombre: 'Castro (Chiloé)' },
+        { lat: -41.8697, lng: -73.8203, nombre: 'Ancud' },
+        { lat: -40.2931, lng: -73.0820, nombre: 'La Unión' },
+        { lat: -40.3356, lng: -72.9556, nombre: 'Río Bueno' },
+        { lat: -39.6431, lng: -72.3339, nombre: 'Panguipulli' },
+        { lat: -41.1267, lng: -73.0489, nombre: 'Frutillar' },
+        { lat: -41.2611, lng: -72.9967, nombre: 'Llanquihue' },
+        { lat: -40.9667, lng: -72.8833, nombre: 'Puerto Octay' },
+        { lat: -40.9167, lng: -73.1667, nombre: 'Purranque' },
+        { lat: -40.0667, lng: -72.8833, nombre: 'Paillaco' },
+        { lat: -40.1333, lng: -72.4167, nombre: 'Futrono' },
+        { lat: -41.7739, lng: -73.1322, nombre: 'Calbuco' }
+      ];
+
+      var bounds = L.latLngBounds(ubicaciones.map(function (u) { return [u.lat, u.lng]; }));
+
+      var map = L.map('mapaCobertura', {
+        scrollWheelZoom: false,
+        dragging: false,
+        doubleClickZoom: false,
+        zoomControl: false,
+        touchZoom: false,
+        boxZoom: false,
+        keyboard: false
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 9 });
+
+      function shuffleArray(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var t = a[i];
+          a[i] = a[j];
+          a[j] = t;
+        }
+        return a;
+      }
+
+      var pinIcon = L.divIcon({
+        className: 'mapa-pin',
+        html: '<span class="mapa-pin-icon"></span>',
+        iconSize: [28, 28],
+        iconAnchor: [14, 28]
+      });
+
+      var ordenAleatorio = shuffleArray(ubicaciones);
+      ordenAleatorio.forEach(function (loc, i) {
+        setTimeout(function () {
+          L.marker([loc.lat, loc.lng], { icon: pinIcon })
+            .addTo(map)
+            .bindTooltip(loc.nombre, {
+              permanent: false,
+              direction: 'top',
+              offset: [0, -12],
+              opacity: 0.95
+            });
+        }, 120 * i);
+      });
+    }
+
+    function activarMapa() {
+      cargarLeaflet(initMapa);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            io.disconnect();
+            activarMapa();
+          }
+        });
+      }, { threshold: 0.15 });
+
+      io.observe(mapEl);
+    } else {
+      activarMapa();
+    }
   })();
 })();

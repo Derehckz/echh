@@ -32,7 +32,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0A1F44" />
@@ -166,19 +165,31 @@
   ======================== -->
   <main id="main">
   <section class="hero" id="inicio">
-    <!-- Carrusel de fondo: 4 imágenes en assets/img/hero/ (hero-1.jpg … hero-4.jpg) -->
+    <!-- Carrusel de fondo: 4 imágenes en assets/img/hero/ (hero-1.webp/jpg … hero-4.webp/jpg) -->
     <div class="hero-bg" id="heroBg">
       <div class="hero-bg-slide active">
-        <img src="assets/img/hero/hero-1.jpg" alt="ECHH Servicios Eléctricos - Técnico eléctrico en Los Lagos y Los Ríos" width="1920" height="1080" fetchpriority="high" onerror="this.src='https://placehold.co/1920x1080/0A1F44/FFC300?text=ECHH'" />
+        <picture>
+          <source srcset="assets/img/hero/hero-1.webp" type="image/webp" />
+          <img src="assets/img/hero/hero-1.jpg" alt="ECHH Servicios Eléctricos - Técnico eléctrico en Los Lagos y Los Ríos" width="1920" height="1080" fetchpriority="high" decoding="async" onerror="this.src='https://placehold.co/1920x1080/0A1F44/FFC300?text=ECHH'" />
+        </picture>
       </div>
       <div class="hero-bg-slide">
-        <img src="assets/img/hero/hero-2.jpg" alt="Instalación y mantención eléctrica - Bombas, tableros, riego y piscinas" width="1920" height="1080" loading="lazy" onerror="this.src='https://placehold.co/1920x1080/112B5E/FFC300?text=Servicios+El%C3%A9ctricos'" />
+        <picture>
+          <source srcset="assets/img/hero/hero-2.webp" type="image/webp" />
+          <img src="assets/img/hero/hero-2.jpg" alt="Instalación y mantención eléctrica - Bombas, tableros, riego y piscinas" width="1920" height="1080" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1920x1080/112B5E/FFC300?text=Servicios+El%C3%A9ctricos'" />
+        </picture>
       </div>
       <div class="hero-bg-slide">
-        <img src="assets/img/hero/hero-3.jpg" alt="Servicios eléctricos profesionales - Normativa SEC Chile" width="1920" height="1080" loading="lazy" onerror="this.src='https://placehold.co/1920x1080/0A1F44/FFFFFF?text=Instalaci%C3%B3n+y+Mantenci%C3%B3n'" />
+        <picture>
+          <source srcset="assets/img/hero/hero-3.webp" type="image/webp" />
+          <img src="assets/img/hero/hero-3.jpg" alt="Servicios eléctricos profesionales - Normativa SEC Chile" width="1920" height="1080" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1920x1080/0A1F44/FFFFFF?text=Instalaci%C3%B3n+y+Mantenci%C3%B3n'" />
+        </picture>
       </div>
       <div class="hero-bg-slide">
-        <img src="assets/img/hero/hero-4.jpg" alt="Cobertura Región de Los Lagos y Región de Los Ríos" width="1920" height="1080" loading="lazy" onerror="this.src='https://placehold.co/1920x1080/112B5E/FFC300?text=Los+Lagos+y+Los+R%C3%ADos'" />
+        <picture>
+          <source srcset="assets/img/hero/hero-4.webp" type="image/webp" />
+          <img src="assets/img/hero/hero-4.jpg" alt="Cobertura Región de Los Lagos y Región de Los Ríos" width="1920" height="1080" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1920x1080/112B5E/FFC300?text=Los+Lagos+y+Los+R%C3%ADos'" />
+        </picture>
       </div>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
@@ -295,7 +306,10 @@
       <!-- Bombas -->
       <div class="servicio-card fade-in" data-servicio>
         <div class="card-imagen">
-          <img src="assets/img/servicios/bombas.jpg" alt="Instalación y mantención de bombas de agua - Sumergibles y de superficie" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Bombas+de+agua'" />
+          <picture>
+            <source srcset="assets/img/servicios/bombas.webp" type="image/webp" />
+            <img src="assets/img/servicios/bombas.jpg" alt="Instalación y mantención de bombas de agua - Sumergibles y de superficie" width="800" height="480" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Bombas+de+agua'" />
+          </picture>
           <span class="card-icono card-icono-overlay" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
           </span>
@@ -311,7 +325,10 @@
       <!-- Tableros -->
       <div class="servicio-card fade-in" data-servicio>
         <div class="card-imagen">
-          <img src="assets/img/servicios/tableros.jpg" alt="Montaje y ampliación de tableros eléctricos domiciliarios e industriales" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Tableros+el%C3%A9ctricos'" />
+          <picture>
+            <source srcset="assets/img/servicios/tableros.webp" type="image/webp" />
+            <img src="assets/img/servicios/tableros.jpg" alt="Montaje y ampliación de tableros eléctricos domiciliarios e industriales" width="800" height="480" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Tableros+el%C3%A9ctricos'" />
+          </picture>
           <span class="card-icono card-icono-overlay" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
           </span>
@@ -327,7 +344,10 @@
       <!-- Riego -->
       <div class="servicio-card fade-in" data-servicio>
         <div class="card-imagen">
-          <img src="assets/img/servicios/riego.jpg" alt="Sistemas de riego automático con control eléctrico" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Riego+autom%C3%A1tico'" />
+          <picture>
+            <source srcset="assets/img/servicios/riego.webp" type="image/webp" />
+            <img src="assets/img/servicios/riego.jpg" alt="Sistemas de riego automático con control eléctrico" width="800" height="480" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Riego+autom%C3%A1tico'" />
+          </picture>
           <span class="card-icono card-icono-overlay" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2C6 8 4 13 4 16a8 8 0 0016 0c0-3-2-8-8-14z"/></svg>
           </span>
@@ -343,7 +363,10 @@
       <!-- Piscinas -->
       <div class="servicio-card fade-in" data-servicio>
         <div class="card-imagen">
-          <img src="assets/img/servicios/piscinas.jpg" alt="Equipos eléctricos de piscinas - Bombas, filtros e iluminación" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Piscinas'" />
+          <picture>
+            <source srcset="assets/img/servicios/piscinas.webp" type="image/webp" />
+            <img src="assets/img/servicios/piscinas.jpg" alt="Equipos eléctricos de piscinas - Bombas, filtros e iluminación" width="800" height="480" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Piscinas'" />
+          </picture>
           <span class="card-icono card-icono-overlay" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M2 12c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0"/><path d="M2 17c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0"/><path d="M7 7h10"/></svg>
           </span>
@@ -359,7 +382,10 @@
       <!-- SEC -->
       <div class="servicio-card fade-in" data-servicio>
         <div class="card-imagen">
-          <img src="assets/img/servicios/sec.jpg" alt="Tramitación de inscripciones eléctricas ante la SEC" width="800" height="480" loading="lazy" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Inscripciones+SEC'" />
+          <picture>
+            <source srcset="assets/img/servicios/sec.webp" type="image/webp" />
+            <img src="assets/img/servicios/sec.jpg" alt="Tramitación de inscripciones eléctricas ante la SEC" width="800" height="480" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x240/112B5E/FFC300?text=Inscripciones+SEC'" />
+          </picture>
           <span class="card-icono card-icono-overlay" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
           </span>
@@ -755,7 +781,6 @@
     </svg>
   </a>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
