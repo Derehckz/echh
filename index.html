@@ -28,9 +28,14 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="alternate icon" href="assets/img/logo.jpg" type="image/jpg" />
   <link rel="apple-touch-icon" href="assets/img/logo.jpg" />
+  <!-- Preload LCP (imagen hero principal) para mejorar Largest Contentful Paint -->
+  <link rel="preload" as="image" href="assets/img/hero/hero-1.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Fuentes cargadas sin bloquear render (display=swap evita texto invisible) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="styles.css" />
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
@@ -135,7 +140,7 @@
        NAVEGACIÓN
   ======================== -->
   <nav>
-    <a href="#inicio" class="nav-logo-link"><img src="assets/img/logo.jpg" alt="ECHH Servicios Eléctricos" class="nav-logo" /></a>
+    <a href="#inicio" class="nav-logo-link"><img src="assets/img/logo.jpg" alt="ECHH Servicios Eléctricos" class="nav-logo" width="160" height="44" decoding="async" /></a>
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
@@ -405,7 +410,7 @@
   <div class="modal-overlay" id="modalServicio" role="dialog" aria-modal="true" aria-labelledby="modalServicioTitulo" aria-hidden="true" hidden>
     <div class="modal-box modal-servicio">
       <button type="button" class="modal-cerrar" id="modalServicioCerrar" aria-label="Cerrar">×</button>
-      <div class="modal-servicio-imagen"><img id="modalServicioImg" src="" alt="" /></div>
+      <div class="modal-servicio-imagen"><img id="modalServicioImg" src="" alt="" width="800" height="480" /></div>
       <div class="modal-servicio-texto">
         <h3 id="modalServicioTitulo" class="modal-titulo"></h3>
         <p id="modalServicioDesc" class="modal-desc"></p>
@@ -467,7 +472,7 @@
     <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">‹</button>
     <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Siguiente">›</button>
     <div class="lightbox-content">
-      <img id="lightboxImg" src="" alt="" />
+      <img id="lightboxImg" src="" alt="" width="1200" height="750" />
       <p id="lightboxCaption" class="lightbox-caption"></p>
     </div>
   </div>

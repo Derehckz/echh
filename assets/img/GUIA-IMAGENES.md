@@ -70,3 +70,13 @@ Rutas, nombres y tamaños recomendados para que todo se vea bien en la web.
 **Formato:** JPG para fotos (buen peso y calidad). PNG si necesitas transparencia (por ejemplo en logo).
 
 Si una imagen es más grande, la web la escala; si es más pequeña, puede pixelarse en pantallas grandes. Respetar la proporción (16:9, 5:3 o 16:10) evita recortes raros.
+
+---
+
+## 5. Optimización para PageSpeed (opcional)
+
+Para mejorar aún más el rendimiento en Google PageSpeed Insights:
+
+- **Comprimir imágenes:** Usa herramientas como [Squoosh](https://squoosh.app/) o TinyPNG para reducir el peso sin perder calidad visible.
+- **Versiones WebP:** Ya usas WebP en hero y servicios. Mantén ambas versiones (.jpg y .webp) para compatibilidad.
+- **Hero responsive (avanzado):** Si creas versiones más pequeñas (ej. 960×540, 640×360), se pueden usar con `srcset` para que móviles carguen menos datos.
