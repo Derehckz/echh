@@ -45,8 +45,8 @@ Options -Indexes
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|webp)$">
-    Header set Cache-Control "public, max-age=31536000"
+  <FilesMatch "\.(css|js|ico|jpg|jpeg|png|gif|svg|webp|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
   <Files "index.html">
