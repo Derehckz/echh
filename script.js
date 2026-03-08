@@ -55,17 +55,51 @@
   window.toggleMenu = toggleMenu;
   window.closeMenu = closeMenu;
 
-  /* --- Fade-in al hacer scroll --- */
+  /* --- Parallax hero (fondo se mueve más lento al hacer scroll) --- */
+  (function () {
+    var hero = document.querySelector('.hero');
+    var heroBg = document.getElementById('heroBg');
+    if (!hero || !heroBg) return;
+    var factor = 0.4;
+    function update() {
+      var rect = hero.getBoundingClientRect();
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        var offset = scrollY * factor;
+        heroBg.style.transform = 'translate3d(0, ' + (-offset) + 'px, 0)';
+      } else {
+        heroBg.style.transform = '';
+      }
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  /* --- Fade-in / Scrollytelling al hacer scroll --- */
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(function (el) {
     observer.observe(el);
+  });
+
+  /* --- Secciones: transición suave al entrar --- */
+  var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('section-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section.seccion, section.zona-servicio, section.sobre-mi').forEach(function (el) {
+    sectionObserver.observe(el);
   });
 
   /* --- Botón volver arriba --- */
